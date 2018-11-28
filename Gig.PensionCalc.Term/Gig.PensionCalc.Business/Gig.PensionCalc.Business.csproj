@@ -42,7 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="IPensionRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\TeacherRule.cs" />
+    <Compile Include="Rules\DefaultRule.cs" />
+    <Compile Include="Rules\BD1959Rule.cs" />
+    <Compile Include="Rules\isWomanRule.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Gig.PensionCalc.Domain\Gig.PensionCalc.Domain.csproj">

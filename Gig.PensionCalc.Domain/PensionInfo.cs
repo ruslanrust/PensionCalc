@@ -21,6 +21,14 @@ namespace Gig.PensionCalc.Domain
         /// </summary>
         public TimeSpan ExpirenceYears { get; set; }
 
+        public string Info { get; set; }
+
+        public override string ToString()
+        {
+            return $"Еще работать {RemainingYears.TotalDays / 365} год;" + 
+                Environment.NewLine + Info;
+        }
+
 
     }
 }

@@ -16,6 +16,9 @@ namespace Gig.PensionCalc.Term
             int age;
             bool isWoman;
 
+            
+
+            #region Ввод значений
             if (args.Length == 3)
             {
                 name = args[0];
@@ -36,16 +39,21 @@ namespace Gig.PensionCalc.Term
                 isWoman = Console.ReadLine().ToLowerInvariant() == "ж";
 
             }
+            #endregion
 
-            var man = new UserInfo();
-            man.Name = name;
-            man.Sex = isWoman ? Sex.Woman : Sex.Man;
-            man.Birthday = DateTime.Today.AddYears(-age);
+
+
+            var man = new UserInfo
+            {
+                Name = name,
+                Sex = isWoman ? Sex.Woman : Sex.Man,
+                Birthday = DateTime.Today.AddYears(-age)
+            };
 
             var calc = new Calculator();
             var pensionInfo = calc.Calc(man);
 
-            var result = $"{man.Name}, тебе еще работать {pensionInfo.RemainingYears} лет";
+            var result = $"{man.Name}, {Environment.NewLine} {pensionInfo}";
             Console.WriteLine(result);
 
              
