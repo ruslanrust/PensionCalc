@@ -1,0 +1,39 @@
+﻿@model Gig.PensionCalc.Domain.PensionInfo
+
+@{
+    ViewBag.Title = "Info";
+}
+
+<h2>Info</h2>
+
+<div>
+    <h4>PensionInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RemainingYears)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RemainingYears)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpirenceYears)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpirenceYears)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Info)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Info)
+        </dd>
+
+    </dl>
+</div>
+
